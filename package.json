@@ -45,6 +45,7 @@
     "animate.css": "^3.2.5",
     "bootstrap-sass": "^3.3.4",
     "font-awesome": "^4.3.0",
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "jquery-smooth-scroll": "^1.5.5"
   }
 }
