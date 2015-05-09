@@ -38,6 +38,9 @@ p {
 .bg-primary {
     background-color: $theme-primary;
 }
+.bg-secondary {
+    background-color: $theme-secondary;
+}
 .bg-dark {
     background-color: $theme-dark;
     color: white;
@@ -150,7 +153,6 @@ header {
         .header-content-inner {
             h1 {
                 font-weight: 700;
-                text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
             }
