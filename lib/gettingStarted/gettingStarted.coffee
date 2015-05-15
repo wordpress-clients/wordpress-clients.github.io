@@ -1,6 +1,11 @@
 showdown = require 'showdown'
 converter = new showdown.Converter()
 require './gettingStarted.scss'
+tagSelected = ''
+documentSelected = ''
+tagSelect = $("#version-selector").change () ->
+    tagSelected = $(@).val()
+    loadDocument documentSelected
 
 preloader = new $.materialPreloader
     position: 'top'
@@ -12,16 +17,21 @@ preloader = new $.materialPreloader
     fadeIn: 200
     fadeOut: 200
 
-loadDocument = (documentUrl) ->
+preloader.on()
+
+loadDocument = (file) ->
+    documentSelected = file
     preloader.on()
     $.ajax
-        url: 'https://cdn.rawgit.com/shprink/wordpress-hybrid-client/' + documentUrl
+        dataType: 'text'
+        cache: true
+        url: "https://cdn.rawgit.com/shprink/wordpress-hybrid-client/#{ tagSelected }/#{ file }"
     .done (content) ->
         html = converter.makeHtml content
         $('#documentation-content').html html
     .fail ->
-        documentUrl = 'https://github.com/shprink/wordpress-hybrid-client/' + 'blob/' + documentUrl
-        html = "Something wrong happened, documentation: <a href='#{ documentUrl }' target='_blank'>#{ documentUrl }</a>"
+        url = "https://github.com/shprink/wordpress-hybrid-client/blob/#{ tagSelected }/#{ file }"
+        html = "Something wrong happened, documentation: <a href='#{ url }' target='_blank'>#{ url }</a>"
         $('#documentation-content').html html
     .always ->
         preloader.off()
@@ -35,4 +45,37 @@ bindClicks = (el, page) ->
 $('.menu-button').each ->
     bindClicks $(this), $(this).data('page')
 
-loadDocument 'master/INSTALLATION.md'
+latestTagPromise = $.ajax
+    dataType: 'json'
+    cache: true
+    url: 'https://api.github.com/repos/shprink/wordpress-hybrid-client/git/refs/heads/master'
+tagListPromise = $.ajax
+    dataType: 'json'
+    cache: true
+    url: 'https://api.github.com/repos/shprink/wordpress-hybrid-client/tags'
+
+selectList = []
+pushToList = (value, text) ->
+    selectList.push
+        val: value
+        text: text
+
+$.when(latestTagPromise, tagListPromise)
+    .done ( latestTagResponse, tagListResponse ) ->
+        if latestTagResponse[1] is 'success'
+            pushToList latestTagResponse[0].object.sha, 'Latest'
+
+        if tagListResponse[1] is 'success'
+            pushToList tag.commit.sha, tag.name for tag in tagListResponse[0]
+
+        for version, i in selectList
+            el = $("<option />")
+            .val version.val
+            .text version.text
+            el.prop 'selected', true if i is 0
+
+            tagSelect.append el
+
+        # Init page
+        tagSelected = selectList[0].val
+        loadDocument 'INSTALLATION.md'
