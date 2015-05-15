@@ -10,12 +10,16 @@
         <meta name="author" content="">
 
         <title>{%=o.htmlWebpackPlugin.options.pkg.title %}</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link href='./css/style.css' rel='stylesheet' type='text/css'>
+        <script>
+            window.currentPage = 'home';
+        </script>
     </head>
 
     <body id="page-top">
-
+        <span class="loader">
+            <span class="loader-inner"></span>
+        </span>
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,20 +33,16 @@
                     <a class="navbar-brand page-scroll" scroll-section href="#page-top">WPHC</a>
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="page-scroll" scroll-section href="#about">About</a>
+                            <a class="page-scroll" href="./getting-started.html">Getting started</a>
                         </li>
                         <li>
-                            <a class="page-scroll" scroll-section href="#services">Services</a>
+                            <a class="page-scroll" href="https://github.com/shprink/wordpress-hybrid-client" target="_blank"><i class="fa fa-github"></i> GitHub</a>
                         </li>
                         <li>
-                            <a class="page-scroll" scroll-section href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" scroll-section href="#contact">Contact</a>
+                            <a class="page-scroll" href="http://julienrenaux.fr/category/wphc">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +51,7 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <header>
+        <header style="background-image: url('lib/img/header.jpg');">
             <div class="header-content">
                 <div class="header-content-inner">
                     <h1>Your WordPress blog on every device for free!</h1>
@@ -67,15 +67,64 @@
             </div>
         </header>
 
-        <section class="bg-primary" id="about">
+        <section class="bg-primary" id="features">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">WPHC</h2>
+                    <div class="col-sm-6">
+                        <h2 class="section-heading">Features</h2>
                         <hr class="light">
-                        <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                        <a href="#" class="btn btn-default btn-xl">Get Started!</a>
-                        <a href="#" class="btn btn-primary btn-xl">Try it out now</a>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled checked />
+                            <span class="checkbox-label">Customizable (configuration files)</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled checked />
+                            <span class="checkbox-label">Social buttons</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled checked />
+                            <span class="checkbox-label">Accessibility (Post font size)</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled checked />
+                            <span class="checkbox-label">Multi Language</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled />
+                            <span class="checkbox-label">Comment system (WP, FB & Disqus)</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled />
+                            <span class="checkbox-label">Push Notifications</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled />
+                            <span class="checkbox-label">Offline mode</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled />
+                            <span class="checkbox-label">Contact form</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled />
+                            <span class="checkbox-label">Display ads</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled />
+                            <span class="checkbox-label">App rate</span>
+                        </div>
+                        <hr class="light">
+                        <div class="feature-buttons text-center">
+                            <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank" class="btn btn-default btn-xl">Contribute!</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <div id="phone-case-wrapper">
+                            <div>
+                                <iframe src="http://m.julienrenaux.fr"></iframe>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -135,27 +184,27 @@
                 </div>
             </div>
             <div class="container">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/angular.png" class="wow bounceIn">
+                        <img src="lib/img/angular.png" width="100" class="wow bounceIn">
                         <h3>AngularJS</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/ionic.png" class="wow bounceIn" data-wow-delay=".1s">
+                        <img src="lib/img/ionic.png" width="100" class="wow bounceIn" data-wow-delay=".1s">
                         <h3>Ionic</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/cordova.png" class="wow bounceIn" data-wow-delay=".2s">
+                        <img src="lib/img/cordova.png" width="100" class="wow bounceIn" data-wow-delay=".2s">
                         <h3>Cordova</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/wpapi.png" class="wow bounceIn" data-wow-delay=".3s">
+                        <img src="lib/img/wpapi.png" width="100" class="wow bounceIn" data-wow-delay=".3s">
                         <h3>WP-API</h3>
                     </div>
                 </div>
@@ -288,9 +337,8 @@
             </div>
         </section>
 
-        {% for (var chunk in o.htmlWebpackPlugin.assets) { %}
-        <script src="{%=o.htmlWebpackPlugin.assets[chunk]%}"></script>
-        {% } %}
+        <script src="{%=o.htmlWebpackPlugin.files.chunks.vendor.entry%}"></script>
+        <script src="{%=o.htmlWebpackPlugin.files.chunks.home.entry%}"></script>
 
     </body>
     <!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->

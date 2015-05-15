@@ -118,7 +118,7 @@ aside {
             background-color: white;
             border-color: rgba($theme-dark, 0.05);
             .navbar-header .navbar-brand {
-                color: $theme-primary;
+                color: black;
                 font-size: 14px;
                 &:hover,
                 &:focus {
@@ -142,7 +142,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url("../img/header.jpg");
+    // background-image: url("../img/header.jpg");
     text-align: center;
     color: white;
     .header-content {

@@ -1,0 +1,9 @@
+@import "../scss/variables";
+#documentation {
+    > .container {
+        background-color: white;
+        color: black;
+        padding: 20px;
+        border: 2px solid lighten($theme-primary, 10%);
+    }
+}

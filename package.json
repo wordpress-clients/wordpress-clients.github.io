@@ -1,51 +1,54 @@
 {
-  "name": "wphc",
-  "version": "1.0.0",
-  "description": "[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shprink/wphc.git"
-  },
-  "author": "shprink <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
-  "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://github.com/shprink/wphc/issues"
-  },
-  "homepage": "https://github.com/shprink/wphc",
-  "devDependencies": {
-    "autoprefixer-loader": "^1.1.0",
-    "clone": "^0.2.0",
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "^1.8.0",
-    "css-loader": "^0.9.1",
-    "exports-loader": "^0.6.2",
-    "expose-loader": "^0.6.0",
-    "file-loader": "^0.8.1",
-    "gulp": "^3.8.10",
-    "gulp-header": "^1.2.2",
-    "gulp-minify-css": "^0.4.4",
-    "gulp-rimraf": "^0.1.1",
-    "gulp-util": "^3.0.1",
-    "gulp-webpack": "^1.1.2",
-    "html-loader": "^0.2.3",
-    "html-webpack-plugin": "^1.1.0",
-    "json-loader": "^0.5.1",
-    "markdown-loader": "^0.1.2",
-    "path": "^0.4.9",
-    "sass-loader": "^0.3.1",
-    "style-loader": "^0.8.3",
-    "util": "^0.10.3",
-    "webpack": "^1.4.13"
-  },
-  "dependencies": {
-    "animate.css": "^3.2.5",
-    "bootstrap-sass": "^3.3.4",
-    "font-awesome": "^4.3.0",
-    "jquery": "^2.1.4",
-    "jquery-smooth-scroll": "^1.5.5"
-  }
+    "name": "wphc",
+    "version": "1.0.0",
+    "title": "WordPress Hybrid client",
+    "description": "[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "devserver": "webpack-dev-server --port 9100 --progress"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shprink/wphc.git"
+    },
+    "author": "shprink <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
+    "license": "Apache 2.0",
+    "bugs": {
+        "url": "https://github.com/shprink/wphc/issues"
+    },
+    "homepage": "https://github.com/shprink/wphc",
+    "devDependencies": {
+        "autoprefixer-loader": "^1.1.0",
+        "clone": "^0.2.0",
+        "coffee-loader": "^0.7.2",
+        "coffee-script": "^1.8.0",
+        "css-loader": "^0.9.1",
+        "exports-loader": "^0.6.2",
+        "expose-loader": "^0.6.0",
+        "file-loader": "^0.8.1",
+        "gulp": "^3.8.10",
+        "gulp-header": "^1.2.2",
+        "gulp-minify-css": "^0.4.4",
+        "gulp-rimraf": "^0.1.1",
+        "gulp-util": "^3.0.1",
+        "gulp-webpack": "^1.1.2",
+        "html-loader": "^0.2.3",
+        "html-webpack-plugin": "^1.1.0",
+        "json-loader": "^0.5.1",
+        "markdown-loader": "^0.1.2",
+        "path": "^0.4.9",
+        "sass-loader": "^0.3.1",
+        "style-loader": "^0.8.3",
+        "util": "^0.10.3",
+        "webpack": "^1.4.13"
+    },
+    "dependencies": {
+        "animate.css": "^3.2.5",
+        "bootstrap-sass": "^3.3.4",
+        "font-awesome": "^4.3.0",
+        "jquery": "^2.1.4",
+        "jquery-smooth-scroll": "^1.5.5",
+        "showdown": "^1.0.0-alpha1"
+    }
 }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{%=o.htmlWebpackPlugin.options.pkg.title %} | Getting started</title>
+        <link href='./css/style.css' rel='stylesheet' type='text/css'>
+        <script>
+            window.currentPage = 'getting-started';
+        </script>
+    </head>
+
+    <body id="page-top" class="bg-primary">
+
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">WPHC</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a class="page-scroll" href="./getting-started.html">Getting started</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="https://github.com/shprink/wordpress-hybrid-client" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://julienrenaux.fr/category/wphc">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <section id="documentation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li class="active">
+                                <a class="menu-button active" data-page="master/INSTALLATION.md" href="javascript:void(0)">Installation</a>
+                            </li>
+                            <li>
+                                <a class="menu-button" data-page="master/DEBUG.md" href="javascript:void(0)">Debug</a>
+                            </li>
+                            <li>
+                                <a class="menu-button" data-page="master/RELEASE.md" href="javascript:void(0)">Release</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7" id="documentation-content">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="{%=o.htmlWebpackPlugin.files.chunks.vendor.entry%}"></script>
+        <script src="{%=o.htmlWebpackPlugin.files.chunks.gettingStarted.entry%}"></script>
+    </body>
+    <!-- {%= o.htmlWebpackPlugin.options.pkg.name + ' v' + o.htmlWebpackPlugin.options.pkg.version + ' built on ' + new Date() %} -->
+
+</html>

@@ -7,10 +7,15 @@ var path = require('path'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: path.join(libPath, 'index.coffee'),
+    entry: {
+        vendor: path.join(libPath, 'index.coffee'),
+        home: path.join(libPath, 'home', 'home.coffee'),
+        gettingStarted: path.join(libPath, 'gettingStarted', 'gettingStarted.coffee'),
+    },
     output: {
         path: path.join(wwwPath, 'js'),
-        filename: 'bundle-[hash:6].js'
+        filename: '[name].bundle-[hash:6].js',
+        chunkFilename: "[id].bundle.js"
     },
     module: {
         loaders: [{
@@ -46,10 +51,22 @@ module.exports = {
         "jquery": "jQuery"
     },
     plugins: [
+        new webpack.optimize.CommonsChunkPlugin("vendor", "vendor-[hash:6].js"),
+        new webpack.optimize.CommonsChunkPlugin("home", "home-[hash:6].js"),
+        new webpack.optimize.CommonsChunkPlugin("gettingStarted", "gettingStarted-[hash:6].js"),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             pkg: pkg,
-            template: path.join(libPath, 'index.html')
+            // chunks: ['home'],
+            // excludeChunks: ['gettingStarted'],
+            template: path.join(libPath, 'home', 'home.html')
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'getting-started.html',
+            pkg: pkg,
+            // chunks: ['gettingStarted'],
+            // excludeChunks: ['home'],
+            template: path.join(libPath, 'gettingStarted', 'gettingStarted.html')
         })
     ]
 };

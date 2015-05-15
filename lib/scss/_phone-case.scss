@@ -1,0 +1,25 @@
+#phone-case-wrapper {
+    position: relative;
+    width: 300px;
+    height: 650px;
+    margin: auto;
+    background: url("../lib/img/phone-case.png") no-repeat left top;
+    background-size: 100%;
+    margin-bottom: 20px;
+    > div {
+        position: absolute;
+        top: 80px;
+        left: 12px;
+        width: 274px;
+        height: 479px;
+        background-color: white;
+        iframe {
+            border: 0;
+            width: 134%;
+            height: 134%;
+            zoom: 0.75;
+            transform: scale(0.75);
+            transform-origin: 0 0;
+        }
+    }
+}
