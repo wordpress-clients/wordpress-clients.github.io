@@ -1,9 +1,10 @@
 #phone-case-wrapper {
     position: relative;
     width: 300px;
+    overflow: hidden;
     height: 650px;
     margin: auto;
-    background: url("../lib/img/phone-case.png") no-repeat left top;
+    background: url("../img/phone-case.png") no-repeat left top;
     background-size: 100%;
     margin-bottom: 20px;
     > div {

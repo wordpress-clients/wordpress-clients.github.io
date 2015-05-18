@@ -7,6 +7,10 @@
         border: 2px solid lighten($theme-primary, 10%);
     }
 }
+#documentation-content {
+    overflow: hidden;
+    word-wrap: break-word;
+}
 #version-selector {
     margin-bottom: 10px;
 }

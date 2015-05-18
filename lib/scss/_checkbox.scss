@@ -92,10 +92,10 @@ input.labelauty[disabled] + label {
 }
 /* Add a background to (un)checked images */
 input.labelauty + label > span.labelauty-unchecked-image {
-    background-image: url("../lib/img/input-unchecked.png ");
+    background-image: url("../img/input-unchecked.png ");
 }
 input.labelauty + label > span.labelauty-checked-image {
-    background-image: url("../lib/img/input-checked.png ");
+    background-image: url("../img/input-checked.png ");
 }
 .checkbox-wrapper {
     label,

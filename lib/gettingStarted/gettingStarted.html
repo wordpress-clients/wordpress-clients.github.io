@@ -2,18 +2,19 @@
 <html lang="en">
 
     <head>
-
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="{%=o.htmlWebpackPlugin.options.pkg.description %}">
+        <meta name="author" content="{%=o.htmlWebpackPlugin.options.pkg.author %}">
+        <meta property="og:title" content="{%=o.htmlWebpackPlugin.options.pkg.title %}" />
+        <meta property="og:description" content="{%=o.htmlWebpackPlugin.options.pkg.description %}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{%=o.htmlWebpackPlugin.options.pkg.url %}" />
+        <meta property="og:image" content="http://wphc.julienrenaux.fr/img/opengraph.jpg" />
+        <meta property="og:locale" content="en_US" />
 
         <title>{%=o.htmlWebpackPlugin.options.pkg.title %} | Getting started</title>
         <link href='./css/style.css' rel='stylesheet' type='text/css'>
-        <script>
-            window.currentPage = 'getting-started';
-        </script>
     </head>
 
     <body id="page-top" class="bg-primary">
@@ -78,6 +79,14 @@
                 <div class="alert alert-info">If you are having trouble with the documentation, open it on <a href="https://github.com/shprink/wordpress-hybrid-client/blob/master/README.md" target="_blank">GitHub</a></div>
             </div>
         </section>
+
+        <div class="ssk-sticky ssk-bottom ssk-center ssk-lg">
+            <a href="" class="ssk ssk-facebook"><i class="fa fa-facebook"></i></a>
+            <a href="" class="ssk ssk-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="" class="ssk ssk-linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="" class="ssk ssk-google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="" class="ssk ssk-email"><i class="fa fa-envelope"></i></a>
+        </div>
 
         <script src="{%=o.htmlWebpackPlugin.files.chunks.vendor.entry%}"></script>
         <script src="{%=o.htmlWebpackPlugin.files.chunks.gettingStarted.entry%}"></script>

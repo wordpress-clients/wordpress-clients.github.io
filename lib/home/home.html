@@ -2,18 +2,19 @@
 <html lang="en">
 
     <head>
-
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="{%=o.htmlWebpackPlugin.options.pkg.description %}">
+        <meta name="author" content="{%=o.htmlWebpackPlugin.options.pkg.author %}">
+        <meta property="og:title" content="{%=o.htmlWebpackPlugin.options.pkg.title %}" />
+        <meta property="og:description" content="{%=o.htmlWebpackPlugin.options.pkg.description %}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="{%=o.htmlWebpackPlugin.options.pkg.url %}" />
+        <meta property="og:image" content="http://wphc.julienrenaux.fr/img/opengraph.jpg" />
+        <meta property="og:locale" content="en_US" />
 
         <title>{%=o.htmlWebpackPlugin.options.pkg.title %}</title>
         <link href='./css/style.css' rel='stylesheet' type='text/css'>
-        <script>
-            window.currentPage = 'home';
-        </script>
     </head>
 
     <body id="page-top">
@@ -51,18 +52,21 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <header style="background-image: url('lib/img/header.jpg');">
+        <header style="background-image: url('./img/header.jpg');">
             <div class="header-content">
                 <div class="header-content-inner">
-                    <h1>Build amazing iOS and Android applications for you WordPress website for free!</h1>
+                    <h1>WordPress Hybrid Client</h1>
+                    <h2>Build amazing applications effortless and for free!</h2>
                     <hr>
-                    <p>With WPHC (WordPress hybrid client), your blog application is just a build away.</p>
-                    <a href="#about" scroll-section class="btn btn-primary btn-xl page-scroll">
-                        Find Out More
-                    </a>
-                    <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank" class="btn btn btn-xl">
-                        <i class="fa fa-github"></i> GitHub project
-                    </a>
+                    <p>With WPHC (WordPress Hybrid Client), your WordPress website application (iOS and Android) is just a build away. </p>
+                    <div class="separated-button text-center">
+                        <a href="#features" scroll-section class="btn btn-primary btn-xl page-scroll">
+                            Find Out More
+                        </a>
+                        <a href="./getting-started.html" scroll-section class="btn btn-danger btn-xl page-scroll">
+                            Getting started
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -72,10 +76,13 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <h2 class="section-heading">Features</h2>
-                        <hr class="light">
                         <div class="checkbox-wrapper">
                             <input type="checkbox" disabled checked />
-                            <span class="checkbox-label">Customizable (configuration files)</span>
+                            <span class="checkbox-label">Automatic content updates</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled checked />
+                            <span class="checkbox-label">Customizable</span>
                         </div>
                         <div class="checkbox-wrapper">
                             <input type="checkbox" disabled checked />
@@ -87,8 +94,13 @@
                         </div>
                         <div class="checkbox-wrapper">
                             <input type="checkbox" disabled checked />
-                            <span class="checkbox-label">Multi Language</span>
+                            <span class="checkbox-label">Multi Languages</span>
                         </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" disabled checked />
+                            <span class="checkbox-label">Google Analytics support</span>
+                        </div>
+                        <h3>Coming</h3>
                         <div class="checkbox-wrapper">
                             <input type="checkbox" disabled />
                             <span class="checkbox-label">Comment system (WP, FB & Disqus)</span>
@@ -113,72 +125,28 @@
                             <input type="checkbox" disabled />
                             <span class="checkbox-label">App rate</span>
                         </div>
-                        <hr class="light">
-                        <div class="feature-buttons text-center">
-                            <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank" class="btn btn-default btn-xl">Contribute!</a>
-                        </div>
                     </div>
-                    <div class="col-sm-6 text-center">
-                        <div id="phone-case-wrapper">
+                    <div class="col-sm-6 text-center" id="demo-wrapper">
+                        <div id="demo-loading">
+                            <i class="fa fa-circle-o-notch fa-spin"></i>
+                            <h3>Loading demo</h3>
+                        </div>
+                        <div id="phone-case-wrapper" style="display: none;">
                             <div>
-                                <iframe src="http://m.julienrenaux.fr"></iframe>
+                                <iframe id="demo" src="http://m.julienrenaux.fr"></iframe>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">At Your Service</h2>
-                        <hr class="primary">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="service-box">
-                            <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                            <h3>Sturdy Templates</h3>
-                            <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="service-box">
-                            <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                            <h3>Ready to Ship</h3>
-                            <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="service-box">
-                            <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                            <h3>Up to Date</h3>
-                            <p class="text-muted">We update dependencies to keep things fresh.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="service-box">
-                            <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                            <h3>Made with Love</h3>
-                            <p class="text-muted">You have to make your websites with love these days!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-dark" id="opensource">
+        <section id="opensource">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Open Source</h2>
-                        <hr class="light">
+                        <hr>
                         <p class="text-faded">WPHC is based on the best Hybrid Open Source technologies that guarantee a enjoyable user experience.</p>
                     </div>
                 </div>
@@ -186,37 +154,37 @@
             <div class="container">
                 <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/angular.png" width="100" class="wow bounceIn">
+                        <img src="./img/angular.png" width="100" class="wow bounceIn">
                         <h3>AngularJS</h3>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/ionic.png" width="100" class="wow bounceIn" data-wow-delay=".1s">
+                        <img src="./img/ionic.png" width="100" class="wow bounceIn" data-wow-delay=".1s">
                         <h3>Ionic</h3>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/cordova.png" width="100" class="wow bounceIn" data-wow-delay=".2s">
+                        <img src="./img/cordova.png" width="100" class="wow bounceIn" data-wow-delay=".2s">
                         <h3>Cordova</h3>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 text-center">
                     <div class="service-box">
-                        <img src="lib/img/wpapi.png" width="100" class="wow bounceIn" data-wow-delay=".3s">
+                        <img src="./img/wpapi.png" width="100" class="wow bounceIn" data-wow-delay=".3s">
                         <h3>WP-API</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="no-padding" id="portfolio">
+        <!-- <section class="no-padding" id="portfolio">
             <div class="container-fluid">
                 <div class="row no-gutter">
                     <div class="col-lg-4 col-sm-6">
                         <a href="#" class="portfolio-box">
-                            <img src="lib/img/portfolio/1.jpg" class="img-responsive" alt="">
+                            <img src="./img/portfolio/1.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -231,7 +199,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a href="#" class="portfolio-box">
-                            <img src="./lib/img/portfolio/2.jpg" class="img-responsive" alt="">
+                            <img src="././img/portfolio/2.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -246,7 +214,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a href="#" class="portfolio-box">
-                            <img src="lib/img/portfolio/3.jpg" class="img-responsive" alt="">
+                            <img src="./img/portfolio/3.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -261,7 +229,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a href="#" class="portfolio-box">
-                            <img src="lib/img/portfolio/4.jpg" class="img-responsive" alt="">
+                            <img src="./img/portfolio/4.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -276,7 +244,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a href="#" class="portfolio-box">
-                            <img src="lib/img/portfolio/5.jpg" class="img-responsive" alt="">
+                            <img src="./img/portfolio/5.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -291,7 +259,7 @@
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a href="#" class="portfolio-box">
-                            <img src="lib/img/portfolio/6.jpg" class="img-responsive" alt="">
+                            <img src="./img/portfolio/6.jpg" class="img-responsive" alt="">
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-category text-faded">
@@ -306,13 +274,13 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
-                    <h2>Free Download at Start Bootstrap!</h2>
-                    <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+                    <h2>Join the project</h2>
+                    <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank" class="btn btn-default btn-xl  wow tada">Contribute now!</a>
                 </div>
             </div>
         </aside>
@@ -321,21 +289,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">Let's Get In Touch!</h2>
+                        <h2 class="section-heading">Get in touch with the project!</h2>
                         <hr class="primary">
-                        <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                    </div>
-                    <div class="col-lg-4 col-lg-offset-2 text-center">
-                        <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                        <p>123-456-6789</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                        <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                        <p>I will be sharing news about the project #wphc on <a href="https://twitter.com/julienrenaux" target="_blank">twitter</a>, <a href="https://www.facebook.com/julienrenauxblog" target="_blank">facebook</a> and on my <a href="http://julienrenaux.fr/category/wphc"
+                            target="_blank">blog</a>. Follow and stay tuned!</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div class="ssk-sticky ssk-bottom ssk-center ssk-lg">
+            <a href="" class="ssk ssk-facebook"><i class="fa fa-facebook"></i></a>
+            <a href="" class="ssk ssk-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="" class="ssk ssk-linkedin"><i class="fa fa-linkedin"></i></a>
+            <a href="" class="ssk ssk-google-plus"><i class="fa fa-google-plus"></i></a>
+            <a href="" class="ssk ssk-email"><i class="fa fa-envelope"></i></a>
+        </div>
 
         <script src="{%=o.htmlWebpackPlugin.files.chunks.vendor.entry%}"></script>
         <script src="{%=o.htmlWebpackPlugin.files.chunks.home.entry%}"></script>

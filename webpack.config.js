@@ -13,7 +13,7 @@ module.exports = {
         gettingStarted: path.join(libPath, 'gettingStarted', 'gettingStarted.coffee'),
     },
     output: {
-        path: path.join(wwwPath, 'js'),
+        path: wwwPath,
         filename: '[name].bundle-[hash:6].js',
         chunkFilename: "[id].bundle.js"
     },

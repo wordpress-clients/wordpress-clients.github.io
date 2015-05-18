@@ -1,4 +1,13 @@
 require './home.scss'
+# img
+require '../img/header.jpg'
+require '../img/phone-case.png'
+require '../img/ionic.png'
+require '../img/wpapi.png'
+require '../img/cordova.png'
+require '../img/angular.png'
+require '../img/input-checked.png'
+require '../img/input-unchecked.png'
 
 $('[scroll-section]').smoothScroll
     offset: - 51
@@ -26,5 +35,12 @@ $('#mainNav').affix
 
 $(":checkbox").labelauty
     label: false
+
+$('#features').scrollspy().on 'activate.bs.scrollspy', ->
+    alert 'ee'
+
+$('#demo').load ->
+    $('#demo-loading').hide()
+    $('#phone-case-wrapper').fadeIn 500
 
 console.log 'home'

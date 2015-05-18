@@ -1,5 +1,12 @@
-#features {
-    .feature-buttons {
-        margin: 15px 0;
+.margin-buttons {
+    margin-top: 35px;
+}
+.separated-button {
+    > a,
+    > button {
+        margin: 5px 10px;
     }
+}
+#demo-loading {
+    font-size: 150px;
 }
