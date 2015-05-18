@@ -3,6 +3,7 @@ require 'expose?WOW!./js/wow'
 require './js/jquery.fittext'
 require './js/checkbox'
 require './js/social-share-kit'
+require './js/ga'
 require 'jquery-smooth-scroll'
 require 'bootstrap-sass/assets/javascripts/bootstrap/transition.js'
 require 'bootstrap-sass/assets/javascripts/bootstrap/collapse.js'
@@ -19,8 +20,9 @@ require '!file?name=css/style.css!autoprefixer!sass!./scss/bootstrap'
 require './img/opengraph.jpg'
 
 SocialShareKit.init
-    text: 'Build amazing WordPress based applications effortless and for free!'
+    text: 'Build amazing WordPress based applications effortless and for free! #wphc'
     url: 'http://wphc.julienrenaux.fr/'
+    title: 'WordPress Hybrid Client'
     twitter:
         via: 'julienrenaux'
     facebook:

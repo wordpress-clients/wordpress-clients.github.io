@@ -59,14 +59,14 @@ module.exports = {
             pkg: pkg,
             // chunks: ['home'],
             // excludeChunks: ['gettingStarted'],
-            template: path.join(libPath, 'home', 'home.html')
+            template: path.join(libPath, 'home.html')
         }),
         new HtmlWebpackPlugin({
             filename: 'getting-started.html',
             pkg: pkg,
             // chunks: ['gettingStarted'],
             // excludeChunks: ['home'],
-            template: path.join(libPath, 'gettingStarted', 'gettingStarted.html')
+            template: path.join(libPath, 'gettingStarted.html')
         })
     ]
 };

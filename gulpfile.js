@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     extend = require('util')._extend,
     pkg = require('./package.json'),
     runSequence = require('run-sequence'),
+    sitemap = require('gulp-sitemap'),
     del = require('del'),
     vinylPaths = require('vinyl-paths'),
     webpackBuildConfig = require("./webpack.config.js"),
@@ -22,7 +23,7 @@ var banner = ['/*!',
 
 gulp.task('default', ['dev']);
 gulp.task('prod', function(callback) {
-    runSequence('_build:clean', '_build:prod', 'build:header', callback);
+    runSequence('_build:clean', '_build:prod', '_sitemap', 'build:header', callback);
 });
 
 gulp.task('dev', function(callback) {
@@ -68,6 +69,14 @@ gulp.task("_build:header:js", function(callback) {
     return gulp.src(path.join(wwwPath, '*.js'))
         .pipe(header(banner, {
             pkg: pkg
+        }))
+        .pipe(gulp.dest(wwwPath));
+});
+
+gulp.task('_sitemap', function() {
+    gulp.src(path.join(libPath, '*.html'))
+        .pipe(sitemap({
+            siteUrl: 'http://wphc.julienrenaux.fr'
         }))
         .pipe(gulp.dest(wwwPath));
 });
