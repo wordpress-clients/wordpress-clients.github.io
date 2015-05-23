@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "title": "WordPress Hybrid Client",
     "url": "http://wphc.julienrenaux.fr/",
+    "keywords": "WordPress, hybrid, app, apps, application, ios, android, native, google play, app store, apple, google, os, free, open source",
     "description": "With WPHC (WordPress Hybrid Client), your WordPress website application (iOS and Android) is just a build away.",
     "main": "index.js",
     "scripts": {

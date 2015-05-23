@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{%=o.htmlWebpackPlugin.options.pkg.description %}">
         <meta name="author" content="{%=o.htmlWebpackPlugin.options.pkg.author %}">
+        <meta name="keywords" content="{%=o.htmlWebpackPlugin.options.pkg.keywords %}">
         <meta property="og:title" content="{%=o.htmlWebpackPlugin.options.pkg.title %}" />
         <meta property="og:description" content="{%=o.htmlWebpackPlugin.options.pkg.description %}" />
         <meta property="og:type" content="website" />
@@ -52,7 +53,7 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <header style="background-image: url('./img/header.jpg');">
+        <header>
             <div class="header-content">
                 <div class="header-content-inner">
                     <h1>WordPress Hybrid Client</h1>
@@ -71,58 +72,81 @@
             </div>
         </header>
 
+        <section id="newsletter" class="bg-dark">
+            <div class="container text-center">
+                <div class="call-to-action">
+                    <h2 class="section-heading">Get in touch with the project!</h2>
+                    <p>I will be sharing news about the project <a href="https://twitter.com/search?q=%23wphc&vertical=default&f=tweets" target="_blank">#wphc</a> on <a href="https://twitter.com/julienrenaux" target="_blank">twitter</a>, <a href="https://www.facebook.com/julienrenauxblog"
+                        target="_blank">facebook</a> and on my <a href="http://julienrenaux.fr/category/wphc" target="_blank">blog</a>. Follow and stay tuned!</p>
+                </div>
+            </div>
+            <div class="container">
+                <form id="newsletter-form" class="form-inline text-center">
+                    <div class="form-group">
+                        <input id="newsletter-email" name="email" type="email" class="form-control" placeholder="email">
+                    </div>
+                    <button type="submit" class="btn btn-default">Register to the newsletter</button>
+                    <label for="newsletter-email"></label>
+                </form>
+            </div>
+        </section>
+
         <section class="bg-primary" id="features">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
                         <h2 class="section-heading">Features</h2>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled checked />
+                            <input type="checkbox" class="beautify" disabled checked />
                             <span class="checkbox-label">Automatic content updates</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled checked />
+                            <input type="checkbox" class="beautify" disabled checked />
                             <span class="checkbox-label">Customizable</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled checked />
+                            <input type="checkbox" class="beautify" disabled checked />
                             <span class="checkbox-label">Social buttons</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled checked />
+                            <input type="checkbox" class="beautify" disabled checked />
                             <span class="checkbox-label">Accessibility (Post font size)</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled checked />
+                            <input type="checkbox" class="beautify" disabled checked />
                             <span class="checkbox-label">Multi Languages</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled checked />
+                            <input type="checkbox" class="beautify" disabled checked />
                             <span class="checkbox-label">Google Analytics support</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Infinite scroll</span>
                         </div>
                         <h3>Coming</h3>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled />
+                            <input type="checkbox" class="beautify" disabled />
                             <span class="checkbox-label">Comment system (WP, FB & Disqus)</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled />
+                            <input type="checkbox" class="beautify" disabled />
                             <span class="checkbox-label">Push Notifications</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled />
+                            <input type="checkbox" class="beautify" disabled />
                             <span class="checkbox-label">Offline mode</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled />
+                            <input type="checkbox" class="beautify" disabled />
                             <span class="checkbox-label">Contact form</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled />
+                            <input type="checkbox" class="beautify" disabled />
                             <span class="checkbox-label">Display ads</span>
                         </div>
                         <div class="checkbox-wrapper">
-                            <input type="checkbox" disabled />
+                            <input type="checkbox" class="beautify" disabled />
                             <span class="checkbox-label">App rate</span>
                         </div>
                     </div>
@@ -180,6 +204,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <hr class="light">
+                        <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank" class="btn btn-primary btn-xl  wow tada">Contribute now!</a>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- <section class="no-padding" id="portfolio">
@@ -278,29 +312,6 @@
                 </div>
             </div>
         </section> -->
-
-        <aside class="bg-dark">
-            <div class="container text-center">
-                <div class="call-to-action">
-                    <h2>Join the project</h2>
-                    <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank" class="btn btn-default btn-xl  wow tada">Contribute now!</a>
-                </div>
-            </div>
-        </aside>
-
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">Get in touch with the project!</h2>
-                        <hr class="primary">
-                        <p>I will be sharing news about the project #wphc on <a href="https://twitter.com/julienrenaux" target="_blank">twitter</a>, <a href="https://www.facebook.com/julienrenauxblog" target="_blank">facebook</a> and on my <a href="http://julienrenaux.fr/category/wphc"
-                            target="_blank">blog</a>. Follow and stay tuned!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <div class="ssk-sticky ssk-bottom ssk-center ssk-lg">
             <a href="" class="ssk ssk-facebook"><i class="fa fa-facebook"></i></a>
             <a href="" class="ssk ssk-twitter"><i class="fa fa-twitter"></i></a>

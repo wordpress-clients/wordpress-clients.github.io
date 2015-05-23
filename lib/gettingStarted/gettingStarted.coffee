@@ -48,7 +48,7 @@ $('.menu-button').each ->
 latestTagPromise = $.ajax
     dataType: 'json'
     cache: true
-    url: 'https://api.github.com/repos/shprink/wordpress-hybrid-client/git/refs/heads/master'
+    url: 'https://api.github.com/repos/shprink/wordpress-hybrid-client/git/refs/heads/develop'
 tagListPromise = $.ajax
     dataType: 'json'
     cache: true

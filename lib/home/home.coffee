@@ -1,3 +1,4 @@
+require '../js/jquery.ajaxchimp.js'
 require './home.scss'
 # img
 require '../img/header.jpg'
@@ -33,7 +34,7 @@ $('#mainNav').affix
 # Initialize WOW.js Scrolling Animations
 (new WOW).init()
 
-$(":checkbox").labelauty
+$(":checkbox.beautify").labelauty
     label: false
 
 $('#features').scrollspy().on 'activate.bs.scrollspy', ->
@@ -43,4 +44,5 @@ $('#demo').load ->
     $('#demo-loading').hide()
     $('#phone-case-wrapper').fadeIn 500
 
-console.log 'home'
+$('#newsletter-form').ajaxChimp
+    url: 'http://julienrenaux.us11.list-manage.com/subscribe/post?u=6d71d93727ca86fadf997ad3c&amp;id=45e802cef7'
