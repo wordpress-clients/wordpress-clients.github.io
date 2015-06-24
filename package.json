@@ -1,60 +1,61 @@
 {
-    "name": "wphc",
-    "version": "1.0.0",
-    "title": "WordPress Hybrid Client",
-    "url": "http://wphc.julienrenaux.fr/",
-    "keywords": "WordPress, hybrid, app, apps, application, ios, android, native, google play, app store, apple, google, os, free, open source",
-    "description": "With WPHC (WordPress Hybrid Client), your WordPress website application (iOS and Android) is just a build away.",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "devserver": "webpack-dev-server --port 9100 --progress",
-        "build": "gulp",
-        "build:prod": "gulp prod"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/shprink/wphc.git"
-    },
-    "author": "Julien Renaux <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
-    "license": "Apache 2.0",
-    "bugs": {
-        "url": "https://github.com/shprink/wphc/issues"
-    },
-    "homepage": "https://github.com/shprink/wphc",
-    "devDependencies": {
-        "autoprefixer-loader": "^1.1.0",
-        "clone": "^0.2.0",
-        "coffee-loader": "^0.7.2",
-        "coffee-script": "^1.8.0",
-        "css-loader": "^0.9.1",
-        "del": "^1.1.1",
-        "exports-loader": "^0.6.2",
-        "expose-loader": "^0.6.0",
-        "file-loader": "^0.8.1",
-        "gulp": "^3.8.10",
-        "gulp-header": "^1.2.2",
-        "gulp-sitemap": "^2.1.0",
-        "gulp-util": "^3.0.1",
-        "gulp-webpack": "^1.1.2",
-        "html-loader": "^0.2.3",
-        "html-webpack-plugin": "^1.1.0",
-        "json-loader": "^0.5.1",
-        "markdown-loader": "^0.1.2",
-        "path": "^0.4.9",
-        "run-sequence": "^1.0.2",
-        "sass-loader": "^0.3.1",
-        "style-loader": "^0.8.3",
-        "util": "^0.10.3",
-        "vinyl-paths": "^1.0.0",
-        "webpack": "^1.4.13"
-    },
-    "dependencies": {
-        "animate.css": "^3.2.5",
-        "bootstrap-sass": "^3.3.4",
-        "font-awesome": "^4.3.0",
-        "jquery": "^2.1.4",
-        "jquery-smooth-scroll": "^1.5.5",
-        "showdown": "^1.0.0-alpha1"
-    }
+  "name": "wphc",
+  "version": "1.0.0",
+  "title": "WordPress Hybrid Client",
+  "url": "http://wphc.julienrenaux.fr/",
+  "keywords": "WordPress, hybrid, app, apps, application, ios, android, native, google play, app store, apple, google, os, free, open source",
+  "description": "With WPHC (WordPress Hybrid Client), your WordPress website application (iOS and Android) is just a build away.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devserver": "webpack-dev-server --port 9100 --progress",
+    "build": "gulp",
+    "build:prod": "gulp prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shprink/wphc.git"
+  },
+  "author": "Julien Renaux <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/shprink/wphc/issues"
+  },
+  "homepage": "https://github.com/shprink/wphc",
+  "devDependencies": {
+    "autoprefixer-loader": "^1.1.0",
+    "clone": "^0.2.0",
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.8.0",
+    "css-loader": "^0.9.1",
+    "del": "^1.1.1",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.6.0",
+    "file-loader": "^0.8.1",
+    "gulp": "^3.8.10",
+    "gulp-header": "^1.2.2",
+    "gulp-sitemap": "^2.1.0",
+    "gulp-util": "^3.0.1",
+    "gulp-webpack": "^1.1.2",
+    "html-loader": "^0.2.3",
+    "html-webpack-plugin": "^1.1.0",
+    "json-loader": "^0.5.1",
+    "markdown-loader": "^0.1.2",
+    "path": "^0.4.9",
+    "run-sequence": "^1.0.2",
+    "sass-loader": "^0.3.1",
+    "style-loader": "^0.8.3",
+    "util": "^0.10.3",
+    "vinyl-paths": "^1.0.0",
+    "webpack": "^1.4.13",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.2.5",
+    "bootstrap-sass": "^3.3.4",
+    "font-awesome": "^4.3.0",
+    "jquery": "^2.1.4",
+    "jquery-smooth-scroll": "^1.5.5",
+    "showdown": "^1.0.0-alpha1"
+  }
 }
