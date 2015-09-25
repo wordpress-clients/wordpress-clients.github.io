@@ -9,8 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devserver": "webpack-dev-server --port 9100 --progress",
-    "build": "gulp",
-    "build:prod": "gulp prod"
+    "build": "rm -rf www/* && gulp",
+    "build:prod": "rm -rf www/* && gulp prod"
   },
   "repository": {
     "type": "git",
@@ -23,32 +23,32 @@
   },
   "homepage": "https://github.com/shprink/wphc",
   "devDependencies": {
-    "autoprefixer-loader": "^1.1.0",
-    "clone": "^0.2.0",
+    "autoprefixer-loader": "^3.1.0",
+    "clone": "^1.0.0",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.8.0",
-    "css-loader": "^0.9.1",
+    "css-loader": "^0.19.0",
     "del": "^1.1.1",
     "exports-loader": "^0.6.2",
-    "expose-loader": "^0.6.0",
+    "expose-loader": "^0.7.0",
     "file-loader": "^0.8.1",
-    "gulp": "^3.8.10",
-    "gulp-header": "^1.2.2",
-    "gulp-sitemap": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-header": "^1.7.0",
+    "gulp-sitemap": "^2.2.0",
     "gulp-util": "^3.0.1",
-    "gulp-webpack": "^1.1.2",
-    "html-loader": "^0.2.3",
-    "html-webpack-plugin": "^1.1.0",
-    "json-loader": "^0.5.1",
+    "gulp-webpack": "^1.5.0",
+    "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^1.6.0",
+    "json-loader": "^0.5.3",
     "markdown-loader": "^0.1.2",
-    "path": "^0.4.9",
-    "run-sequence": "^1.0.2",
-    "sass-loader": "^0.3.1",
-    "style-loader": "^0.8.3",
+    "path": "^0.12.0",
+    "run-sequence": "^1.1.0",
+    "sass-loader": "^2.0.0",
+    "style-loader": "^0.12.0",
     "util": "^0.10.3",
-    "vinyl-paths": "^1.0.0",
-    "webpack": "^1.4.13",
-    "webpack-dev-server": "^1.9.0"
+    "vinyl-paths": "^2.0.0",
+    "webpack": "^1.12.0",
+    "webpack-dev-server": "^1.11.0"
   },
   "dependencies": {
     "animate.css": "^3.2.5",
@@ -56,6 +56,7 @@
     "font-awesome": "^4.3.0",
     "jquery": "^2.1.4",
     "jquery-smooth-scroll": "^1.5.5",
+    "node-sass": "^3.3.3",
     "showdown": "^1.0.0-alpha1"
   }
 }

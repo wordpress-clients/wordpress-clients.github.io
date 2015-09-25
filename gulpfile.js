@@ -23,15 +23,11 @@ var banner = ['/*!',
 
 gulp.task('default', ['dev']);
 gulp.task('prod', function(callback) {
-    runSequence('_build:clean', '_build:prod', '_sitemap', 'build:header', callback);
+    runSequence('_build:prod', '_sitemap', 'build:header', callback);
 });
 
 gulp.task('dev', function(callback) {
-    runSequence('_build:clean', '_build:dev', callback);
-});
-
-gulp.task('_build:clean', function(cb) {
-    return gulp.src(wwwPath).pipe(vinylPaths(del));
+    runSequence('_build:dev', callback);
 });
 
 gulp.task("_build:dev", function(callback) {
