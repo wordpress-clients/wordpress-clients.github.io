@@ -101,17 +101,17 @@ aside {
         background-color: transparent;
         border-color: rgba(white, 0.3);
         .navbar-header .navbar-brand {
-            color: rgba(white, 0.7);
+            color: rgba($text-color, 0.7);
             &:hover,
             &:focus {
-                color: white;
+                color: $text-color;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, 0.7);
+            color: rgba($text-color, 0.7);
             &:hover {
-                color: white;
+                color: $text-color;
             }
         }
         &.affix {
@@ -135,17 +135,20 @@ aside {
         }
     }
 }
+header, #demo {
+    // @include background-cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-color: $theme-secondary;
+    background-image: url("../img/texture.png");
+}
 // Homepage Header
 header {
     position: relative;
     width: 100%;
     min-height: auto;
-    @include background-cover;
-    background-position: center;
-    background-color: #202119;
-    background-image: url("../img/header.jpg");
     text-align: center;
-    color: white;
+    color: $text-color;
     .header-content {
         position: relative;
         text-align: center;
@@ -154,15 +157,15 @@ header {
         .header-content-inner {
             h1 {
                 font-weight: 700;
-                margin-top: 0;
+                margin-top: 30px;
                 margin-bottom: 0;
             }
             hr {
                 margin: 30px auto;
             }
             p {
-                font-weight: 300;
-                color: rgba(white, 0.7);
+                // font-weight: 300;
+                color: rgba($text-color, 0.8);
                 font-size: 16px;
                 margin-bottom: 50px;
             }

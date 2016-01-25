@@ -13,6 +13,7 @@
         <meta property="og:url" content="{%=o.htmlWebpackPlugin.options.pkg.url %}" />
         <meta property="og:image" content="http://wphc.julienrenaux.fr/img/opengraph.jpg" />
         <meta property="og:locale" content="en_US" />
+        <meta name="google-site-verification" content="005yEZhvrSyDVHAlIbDTDIosZskyIKOybc-NpPmHzLM" />
 
         <title>{%=o.htmlWebpackPlugin.options.pkg.title %}</title>
         <link href='./css/style.css' rel='stylesheet' type='text/css'>
@@ -54,23 +55,40 @@
         </nav>
 
         <header>
+
             <div class="header-content">
                 <div class="header-content-inner">
-                    <h1>WordPress Hybrid Client</h1>
-                    <h2>Build amazing applications effortless and for free!</h2>
-                    <hr>
-                    <p>{%=o.htmlWebpackPlugin.options.pkg.description %}</p>
-                    <div class="separated-button text-center">
-                        <a href="#features" scroll-section class="btn btn-primary btn-xl page-scroll">
-                            Features
-                        </a>
-                        <a href="./getting-started.html" scroll-section class="btn btn-primary btn-xl page-scroll">
-                            Documentation
-                        </a>
-                        <a href="https://github.com/shprink/wordpress-hybrid-client/releases/tag/v1.7.0" target="_blank" class="btn btn-danger btn-xl">
-                            <i class="fa fa-github"></i> v1.7.0
-                        </a>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <img src="./img/wphc-icon-square.png" width="150" />
+                            <h1>WordPress Hybrid Client</h1>
+                            <h2>Build amazing applications effortless and for free!</h2>
+                            <hr>
+                            <p>{%=o.htmlWebpackPlugin.options.pkg.description %}</p>
+                            <div class="separated-button text-center">
+
+                                <a href="#demo" scroll-section class="btn btn-primary btn-xl page-scroll">
+Demo
+</a><a href="#features" scroll-section class="btn btn-primary btn-xl page-scroll">
+Features
+</a>
+                                <a href="./getting-started.html" scroll-section class="btn btn-primary btn-xl page-scroll">
+                Documentation
+            </a>
+                                <a href="#" target="_blank" class="btn btn-danger btn-xl" id="version">
+                                    <i class="fa fa-circle-o-notch fa-spin"></i>
+                                </a>
+                            </div>
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- wphc top -->
+                            <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9974006789511266" data-ad-slot="6523074200"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </header>
@@ -79,6 +97,7 @@
             <div class="container text-center">
                 <div class="call-to-action">
                     <h2 class="section-heading">Get in touch with the project!</h2>
+                    <hr class="light">
                     <p>I will be sharing news about the project <a href="https://twitter.com/search?q=%23wphc&vertical=default&f=tweets" target="_blank">#wphc</a> on <a href="https://twitter.com/julienrenaux" target="_blank">twitter</a>, <a href="https://www.facebook.com/julienrenauxblog"
                         target="_blank">facebook</a> and on my <a href="http://julienrenaux.fr/category/wphc" target="_blank">blog</a>. Follow and stay tuned!</p>
                 </div>
@@ -88,100 +107,128 @@
                     <div class="form-group">
                         <input id="newsletter-email" name="email" type="email" class="form-control" placeholder="email">
                     </div>
-                    <button type="submit" class="btn btn-default">Register to the newsletter</button>
+                    <button type="submit" class="btn btn-danger">Register to the newsletter</button>
                     <label for="newsletter-email"></label>
                 </form>
+            </div>
+        </section>
+
+        <section id="demo" class="bg-secondary">
+            <div class="container  text-center">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Demo <i id="demo-loading" class="fa fa-spinner fa-pulse"></i></h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+                    <div class="col-lg-4">
+                        <!-- wphc demo -->
+                        <ins class="adsbygoogle"
+                             style="display:inline-block;width:300px;height:600px"
+                             data-ad-client="ca-pub-9974006789511266"
+                             data-ad-slot="4906740203"></ins>
+                        <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                    <div class="col-sm-8 text-center" id="demo-wrapper">
+                        <div id="phone-case-wrapper">
+                            <div>
+                                <iframe id="demo-iframe" src="http://m.julienrenaux.fr"></iframe>
+                            </div>
+                            <!-- <div id="demo-loading">
+                                <i class="fa fa-spinner fa-pulse"></i>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.shprinkinc.wordpresshybridclient" target="_blank" class="btn btn-primary btn-xl page-scroll">
+                    Try it on Android
+                </a>
             </div>
         </section>
 
         <section class="bg-primary" id="features">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-lg-12 text-center">
                         <h2 class="section-heading">Features</h2>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Automatic content updates</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Customizable</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Social buttons</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Accessibility (Post font size)</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Multi Languages</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Google Analytics support</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Infinite scroll</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">App rate</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Push Notifications</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Offline mode (Bookmarks)</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Display comments</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Side menu with up to 6 levels depth</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">iOS9 support</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled checked />
-                            <span class="checkbox-label">Native transitions [NEW in 1.7.0]</span>
-                        </div>
-                        <h3>Coming</h3>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled />
-                            <span class="checkbox-label">Contact form</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled />
-                            <span class="checkbox-label">Display ads</span>
-                        </div>
-                        <div class="checkbox-wrapper">
-                            <input type="checkbox" class="beautify" disabled />
-                            <span class="checkbox-label">Author list</span>
-                        </div>
+                        <hr class="light">
                     </div>
-                    <div class="col-sm-6 text-center" id="demo-wrapper">
-                        <div id="demo-loading">
-                            <i class="fa fa-circle-o-notch fa-spin"></i>
-                            <h3>Loading demo</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Posts</span>
                         </div>
-                        <div id="phone-case-wrapper" style="display: none;">
-                            <div>
-                                <iframe id="demo" src="http://m.julienrenaux.fr"></iframe>
-                            </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Pages</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.shprinkinc.wordpresshybridclient" target="_blank" class="btn btn-primary btn-xl page-scroll">
-                            Try it on Android
-                        </a>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Custom posts</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Taxonomies (Category, Tag and custom)</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Authors</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Search</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Push Notifications (Free)</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Custom templates (overwrite any template of the app)</span>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Social sharing</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Sass variables</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Languages (6 so far) and accessibility</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Image cache on device</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">App rate plugin</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Syntax highlighter</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Offline (Bookmarks)</span>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" class="beautify" disabled checked />
+                            <span class="checkbox-label">Comments</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,102 +282,6 @@
 
         </section>
 
-        <!-- <section class="no-padding" id="portfolio">
-            <div class="container-fluid">
-                <div class="row no-gutter">
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                            <img src="./img/portfolio/1.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Category
-                                    </div>
-                                    <div class="project-name">
-                                        Project Name
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                            <img src="././img/portfolio/2.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Category
-                                    </div>
-                                    <div class="project-name">
-                                        Project Name
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                            <img src="./img/portfolio/3.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Category
-                                    </div>
-                                    <div class="project-name">
-                                        Project Name
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                            <img src="./img/portfolio/4.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Category
-                                    </div>
-                                    <div class="project-name">
-                                        Project Name
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                            <img src="./img/portfolio/5.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Category
-                                    </div>
-                                    <div class="project-name">
-                                        Project Name
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="#" class="portfolio-box">
-                            <img src="./img/portfolio/6.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Category
-                                    </div>
-                                    <div class="project-name">
-                                        Project Name
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <div class="ssk-sticky ssk-bottom ssk-center ssk-lg">
             <a href="" class="ssk ssk-facebook"><i class="fa fa-facebook"></i></a>
             <a href="" class="ssk ssk-twitter"><i class="fa fa-twitter"></i></a>

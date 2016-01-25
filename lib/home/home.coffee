@@ -1,7 +1,7 @@
 require '../js/jquery.ajaxchimp.js'
 require './home.scss'
 # img
-require '../img/header.jpg'
+require '../img/texture.png'
 require '../img/phone-case.png'
 require '../img/ionic.png'
 require '../img/wpapi.png'
@@ -9,6 +9,8 @@ require '../img/cordova.png'
 require '../img/angular.png'
 require '../img/input-checked.png'
 require '../img/input-unchecked.png'
+require '../img/wphc-icon.png'
+require '../img/wphc-icon-square.png'
 
 $('[scroll-section]').smoothScroll
     offset: - 51
@@ -37,12 +39,27 @@ $('#mainNav').affix
 $(":checkbox.beautify").labelauty
     label: false
 
-$('#features').scrollspy().on 'activate.bs.scrollspy', ->
-    alert 'ee'
+# $('#features').scrollspy().on 'activate.bs.scrollspy', ->
+#     alert 'ee'
 
-$('#demo').load ->
+$('#demo-iframe').load ->
     $('#demo-loading').hide()
-    $('#phone-case-wrapper').fadeIn 500
+    # $('#phone-case-wrapper').fadeIn 500
 
 $('#newsletter-form').ajaxChimp
     url: 'http://julienrenaux.us11.list-manage.com/subscribe/post?u=6d71d93727ca86fadf997ad3c&amp;id=45e802cef7'
+
+tagListPromise = $.ajax
+    dataType: 'json'
+    cache: true
+    url: 'https://api.github.com/repos/shprink/wordpress-hybrid-client/tags'
+
+tagListPromise
+    .then (response) =>
+        $('#version')
+            .html "<i class='fa fa-github'></i> #{response[0].name}"
+            .attr 'href', "https://github.com/shprink/wordpress-hybrid-client/releases/tag/#{response[0].name}"
+    ,() =>
+        $('#version')
+            .html "<i class='fa fa-github'></i> See versions"
+            .attr 'href', "https://github.com/shprink/wordpress-hybrid-client/releases"
